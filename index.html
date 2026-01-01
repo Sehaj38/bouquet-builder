@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouquet Builder</title>
+    <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        img-src 'self' data: https:;
+        script-src 'self' https://unpkg.com https://cdnjs.cloudflare.com;
+        style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+        font-src https://fonts.gstatic.com;
+      ">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Image capture libraries -->
+    <script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<section class="landing_page" id="landing-screen">
+    <h1>Make a Bouquet</h1>
+    <img src="assets/icons/illustration.png" alt="Floral illustration" width="300" height="300" crossorigin="anonymous">
+    <h3>
+        Compose your unique bouquet,<br>
+        choose a cute bow and send it to your loved one<br>♡
+    </h3>
+    <button id="start-btn">Let's Go</button>
+</section>
+
+<main id="main-app" class="hidden">
+    <div id="petal-container"></div>
+
+    <section id="preview-section" class="preview">
+        <h4>Your Bouquet Preview</h4>
+
+        <div id="bouquet-display">
+            <img src="assets/icons/bouquet.svg" class="static-vase" alt="Vase" crossorigin="anonymous">
+        </div>
+
+        <button id="clear-btn" class="next-btn">Clear All</button>
+        <button id="download-btn" class="next-btn">Download Bouquet</button>
+    </section>
+
+    <div id="selection-area">
+
+        <section id="flower-selection-screen" class="selection_content">
+            <h2>Select Your Flowers</h2>
+            <div class="placeholder-grid">
+                <img id="flower_1" src="assets/flowers/flower_1.svg" class="pixel-art" crossorigin="anonymous">
+                <img id="flower_2" src="assets/flowers/flower_2.svg" class="pixel-art" crossorigin="anonymous">
+                <img id="flower_3" src="assets/flowers/flower_3.svg" class="pixel-art" crossorigin="anonymous">
+                <img id="flower_4" src="assets/flowers/flower_4.svg" class="pixel-art" crossorigin="anonymous">
+                <img id="flower_5" src="assets/flowers/flower_5.svg" class="pixel-art" crossorigin="anonymous">
+                <img id="flower_6" src="assets/flowers/flower_6.svg" class="pixel-art" crossorigin="anonymous">
+                <img id="flower_7" src="assets/flowers/flower_7.svg" class="pixel-art" crossorigin="anonymous">
+            </div>
+            <button id="to-bows-btn" class="next-btn">Next: Choose a Bow</button>
+        </section>
+
+        <section id="bow-selection-screen" class="selection_content hidden">
+            <h2>Select Your Bow</h2>
+            <div class="placeholder-grid">
+                <img src="assets/bows/bow_1.svg" class="pixel-art-bow" crossorigin="anonymous">
+                <img src="assets/bows/bow_2.svg" class="pixel-art-bow" crossorigin="anonymous">
+                <img src="assets/bows/bow_3.svg" class="pixel-art-bow" crossorigin="anonymous">
+                <img src="assets/bows/bow_4.svg" class="pixel-art-bow" crossorigin="anonymous">
+                <img src="assets/bows/bow_5.svg" class="pixel-art-bow" crossorigin="anonymous">
+            </div>
+            <button id="back-to-flowers-btn" class="next-btn">Back to Flowers</button>
+        </section>
+
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

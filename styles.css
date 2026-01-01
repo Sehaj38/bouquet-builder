@@ -1,0 +1,324 @@
+* {
+    font-family: 'Kalnia', Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightcoral;
+    overflow: hidden; 
+}
+
+/* LANDING PAGE */
+.landing_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.landing_page img {
+    animation: float 3s ease-in-out infinite;
+    image-rendering: pixelated;
+}
+
+h1 { font-size: 80px; color: white; }
+h3 { font-size: 30px; color: white; margin: 20px 0; }
+h2 { font-size: 50px; color: white; margin-bottom: 20px; }
+h4 { font-size: 24px; color: white; margin-bottom: 10px; }
+
+button {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover { transform: scale(1.05); }
+
+/* PETALS */
+.petal {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+
+    animation-name: fall, sway;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: 1, infinite;
+
+    --driftX: 0px;
+    --rotate: 0deg;
+}
+@keyframes fall {
+    to {
+        transform: translate(var(--driftX), 110vh) rotate(var(--rotate));
+        opacity: 0.2;
+    }
+}
+@keyframes sway {
+    0%   { margin-left: 0; }
+    50%  { margin-left: 30px; }
+    100% { margin-left: 0; }
+}
+
+/* MAIN DASHBOARD */
+#main-app {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.preview {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: rgba(47, 28, 28, 0.1);
+}
+
+#selection-area {
+    flex: 7;
+    background-color: lightcoral;
+}
+
+/* FRAMED PREVIEW AREA */
+#bouquet-display {
+    position: relative;
+    width: 380px;
+    height: 600px;
+    margin: 20px auto;
+    border: 8px double white;
+    background-color: rgba(47, 28, 28, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    
+    display: flex; 
+    justify-content: center; 
+}
+
+.selection_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.placeholder-grid {
+    display: grid;
+    background-color: rgb(224, 204, 178);
+    border: 1px double black;
+    border-radius: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.placeholder-grid img {
+    width: 150px;
+    border: 1px double black;
+    border-radius: 20px;
+}
+
+/* Selection Images */
+.pixel-art, .pixel-art-bow {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.pixel-art:hover, .pixel-art-bow:hover {
+    transform: scale(1.1);
+}
+
+/* Cross-browser pixelated rendering */
+.pixel-art, .pixel-art-bow, .static-vase, .added-flower, .added-bow {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+
+
+/* Static Vase - always visible */
+.static-vase {
+    position: absolute;
+    width: 300px; /* Adjust based on your SVG */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    pointer-events: none;
+}
+
+/* Added Flowers */
+.added-flower {
+    position: absolute;
+    width: 180px;
+    z-index: 8;
+    bottom: 110px;
+    left: 50%;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Added Bow */
+.added-bow {
+    position: absolute;
+    width: 70px;
+    z-index: 10;
+    bottom: 90px; /* Slightly above vase rim */
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Utilities */
+.hidden { display: none !important; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.next-btn { margin-top: 30px; }
+
+
+
+/* ============================
+   MOBILE LAYOUT (≤ 768px)
+   ============================ */
+@media (max-width: 768px) {
+
+    body {
+        overflow: auto;
+    }
+
+    /* Stack main sections vertically */
+    #main-app {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    /* Preview section moves to top */
+    .preview {
+        flex: none;
+        padding: 20px 10px;
+    }
+
+    /* Bouquet preview size reduced */
+    #bouquet-display {
+        width: 260px;
+        height: 420px;
+        margin: 15px auto;
+    }
+
+    /* Vase scale */
+    .static-vase {
+        width: 220px;
+    }
+
+    /* Flower placement scale */
+    .added-flower {
+        width: 130px;
+        bottom: 80px;
+    }
+
+    .added-bow {
+        width: 50px;
+        bottom: 70px;
+    }
+
+    /* Selection area */
+    #selection-area {
+        flex: none;
+        padding-bottom: 40px;
+    }
+
+    /* Grid becomes 3 columns */
+    .placeholder-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    /* Touch-friendly images */
+    .pixel-art,
+    .pixel-art-bow {
+        width: 80px;
+    }
+
+    /* Buttons */
+    button {
+        font-size: 16px;
+        padding: 10px 22px;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    /* Landing page spacing */
+    .landing_page img {
+        width: 220px;
+        height: auto;
+    }
+}
+
+/* ============================
+   SMALL PHONES (≤ 480px)
+   ============================ */
+@media (max-width: 480px) {
+
+    #bouquet-display {
+        width: 220px;
+        height: 360px;
+    }
+
+    .static-vase {
+        width: 190px;
+    }
+
+    .added-flower {
+        width: 110px;
+        bottom: 70px;
+    }
+
+    .added-bow {
+        width: 45px;
+        bottom: 60px;
+    }
+
+    .placeholder-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    button {
+        width: 90%;
+        max-width: 300px;
+    }
+}
