@@ -84,7 +84,6 @@ button:hover { transform: scale(1.05); }
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    background-color: rgba(47, 28, 28, 0.1);
 }
 
 #selection-area {
@@ -96,7 +95,7 @@ button:hover { transform: scale(1.05); }
 #bouquet-display {
     position: relative;
     width: 380px;
-    height: 600px;
+    height: 100%;
     margin: 20px auto;
     border: 8px double white;
     background-color: rgba(47, 28, 28, 0.1);
@@ -113,6 +112,7 @@ button:hover { transform: scale(1.05); }
     align-items: center;
     justify-content: center;
     height: 100%;
+    
 }
 
 .placeholder-grid {
@@ -166,7 +166,7 @@ button:hover { transform: scale(1.05); }
     position: absolute;
     width: 180px;
     z-index: 8;
-    bottom: 110px;
+    bottom: 130px;
     left: 50%;
     pointer-events: none;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -177,7 +177,7 @@ button:hover { transform: scale(1.05); }
     position: absolute;
     width: 70px;
     z-index: 10;
-    bottom: 90px; /* Slightly above vase rim */
+    bottom: 50px; /* Slightly above vase rim */
     left: 50%;
     transform: translateX(-50%);
     pointer-events: none;
@@ -209,6 +209,7 @@ button:hover { transform: scale(1.05); }
         flex-direction: column;
         height: auto;
         min-height: 100vh;
+        margin: 10px;
     }
 
     /* Preview section moves to top */
@@ -232,12 +233,12 @@ button:hover { transform: scale(1.05); }
     /* Flower placement scale */
     .added-flower {
         width: 130px;
-        bottom: 80px;
+        bottom: 100px;
     }
 
     .added-bow {
         width: 50px;
-        bottom: 70px;
+        bottom: 40px;
     }
 
     /* Selection area */
@@ -315,6 +316,7 @@ button:hover { transform: scale(1.05); }
 
     .placeholder-grid {
         grid-template-columns: repeat(2, 1fr);
+        margin: 50px;
     }
 
     button {
