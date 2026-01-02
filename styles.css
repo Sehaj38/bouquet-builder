@@ -1,5 +1,15 @@
+@font-face {
+  font-family: 'Rapunled';
+  src: url('assets/fonts/rapunled-regular.woff2') format('woff2'),
+       url('assets/fonts/rapunled-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
-    font-family: 'Fraunces', Helvetica, sans-serif;
+    font-family: 'Rapunled', Helvetica, sans-serif;
+    letter-spacing: 1.5px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,10 +36,10 @@ body {
     image-rendering: pixelated;
 }
 
-h1 { font-style: italic ;font-size: 80px; color: white; }
+h1 { font-style: italic; font-size: 80px; color: white; }
 h3 { font-family: Arima; font-size:  30px; color: white; margin: 20px 0; }
-h2 { font-size: 50px; color: white; margin-bottom: 20px; }
-h4 { font-size: 24px; color: white; margin-bottom: 10px; }
+h2 { font-size: 50px;letter-spacing: 4px; color: white; margin-bottom: 20px; }
+h4 { font-size: 24px;letter-spacing: 2px; color: white; margin-bottom: 10px; }
 
 button {
     font-size: 20px;
