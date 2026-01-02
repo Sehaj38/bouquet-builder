@@ -54,18 +54,22 @@ Simply open index.html in any modern browser.
 
  - Click Download Bouquet to save it as an image
 
-## 📂 Project Structure
+## 📁 Project Structure
+
+```
 bouquet-builder/
 │
-├── index.html          # Main HTML file
-├── styles.css          # Styling and responsive design
-├── script.js           # App logic and animations
+├── index.html        # Main HTML file
+├── styles.css        # All styles & responsive rules
+├── script.js         # App logic & animations
+│
 ├── assets/
-│   ├── flowers/        # Flower SVGs
-│   ├── bows/           # Bow SVGs
-│   └── icons/          # Vase, petals, illustrations
+│   ├── flowers/      # Flower SVGs
+│   ├── bows/         # Bow SVGs
+│   └── icons/        # Vase, petals, illustrations
+│
 └── README.md
-
+```
 
 ## 🎨 Design Details
 
