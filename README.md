@@ -34,27 +34,27 @@ Bouquet Builder is a fun and interactive web app that lets users create their ow
 ```bash
 git clone https://github.com/Sehaj38/bouquet-builder.git
 ```
-2. Open the project
+### 2. Open the project
 
 Simply open index.html in any modern browser.
 
-🎮 How It Works
+## 🎮 How It Works
 
-Start on the landing page and click “Let’s Go”
+ - Start on the landing page and click “Let’s Go”
 
-Enjoy the falling petals animation
+ - Enjoy the falling petals animation
 
-Select flowers to build your bouquet
+ - Select flowers to build your bouquet
 
-Click Next: Choose a Bow to add a bow
+ - Click Next: Choose a Bow to add a bow
 
-Preview your bouquet in the vase
+ - Preview your bouquet in the vase
 
-Click Clear All to reset
+ - Click Clear All to reset
 
-Click Download Bouquet to save it as an image
+ - Click Download Bouquet to save it as an image
 
-📂 Project Structure
+## 📂 Project Structure
 bouquet-builder/
 │
 ├── index.html          # Main HTML file
@@ -66,30 +66,31 @@ bouquet-builder/
 │   └── icons/          # Vase, petals, illustrations
 └── README.md
 
-🎨 Design Details
 
-Flowers stack dynamically above the vase
+## 🎨 Design Details
 
-Slight rotation and spacing for a natural bouquet look
+ - Flowers stack dynamically above the vase
 
-Only one bow can be added at a time
+ - Slight rotation and spacing for a natural bouquet look
 
-CSS animations used for petals and hover effects
+ - Only one bow can be added at a time
 
-Optimized for touch devices
+ - CSS animations used for petals and hover effects
 
-🔮 Future Enhancements
+ - Optimized for touch devices
 
-Drag & drop flower placement
+## 🔮 Future Enhancements
 
-More flower and bow options
+ - Drag & drop flower placement
 
-Color customization
+ - More flower and bow options
 
-Save bouquet designs
+ - Color customization
 
-Share bouquet on social media
+ - Save bouquet designs
 
-📄 License
+ - Share bouquet on social media
 
-This project is open-source and free to use.
+## 📄 License
+
+ - This project is open-source and free to use.
