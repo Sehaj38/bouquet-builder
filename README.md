@@ -25,7 +25,6 @@ Bouquet Builder is a fun and interactive web app that lets users create their ow
 - **Libraries**
   - `html-to-image` – DOM to PNG export
   - `html2canvas` – backup image capture
-- **Google Fonts** – Kalnia
 
 ---
 
