@@ -99,24 +99,11 @@ bouquet-builder/
 
  - This project uses the Rapunled font.
 
- - Font author note:
-
-This font is free for PERSONAL USE ONLY.
-
-If you need it for commercial use, you must purchase a license: https://www.creativefabrica.com/product/rapunled/ref/2619719/
-
-Donations are appreciated: https://www.paypal.me/dida21
-
-Instagram (author): https://www.instagram.com/lettersweetstudio/
-
- - Font source:
-
-https://www.1001fonts.com/rapunled-font.html
+ - Font source: https://www.1001fonts.com/rapunled-font.html
 
 ⚠️ Important: If you plan to use this project commercially (selling, client work, monetized platforms), make sure you obtain the appropriate font license from the author.
 
 📜 License
 
  - This project’s code is licensed under the MIT License. You are free to use, modify, and distribute the code with attribution.
-
-# Note: The font license is separate and governed by the font author’s terms.
+ - Note: The font license is separate and governed by the font author’s terms.
