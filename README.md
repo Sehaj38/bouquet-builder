@@ -2,11 +2,7 @@
 
 Bouquet Builder is a fun and interactive web app that lets users create their own custom bouquet. You can select flowers, add a bow, preview everything in a vase, and download the final bouquet as an image.
 
-# Site is live at
-
-```
-https://sehaj38.github.io/bouquet-builder/
-```
+🔗 Live Demo: https://sehaj38.github.io/bouquet-builder/
 ---
 
 ## ✨ Features
