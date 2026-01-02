@@ -25,7 +25,6 @@ Bouquet Builder is a fun and interactive web app that lets users create their ow
 - **Libraries**
   - `html-to-image` – DOM to PNG export
   - `html2canvas` – backup image capture
-- **Google Fonts** – Kalnia
 
 ---
 
@@ -96,6 +95,15 @@ bouquet-builder/
 
  - Share bouquet on social media
 
-## 📄 License
+## 🔤 Font Usage & Attribution
 
- - This project is open-source and free to use.
+ - This project uses the Rapunled font.
+
+ - Font source: https://www.1001fonts.com/rapunled-font.html
+
+⚠️ Important: If you plan to use this project commercially (selling, client work, monetized platforms), make sure you obtain the appropriate font license from the author.
+
+📜 License
+
+ - This project’s code is licensed under the MIT License. You are free to use, modify, and distribute the code with attribution.
+ - Note: The font license is separate and governed by the font author’s terms.
