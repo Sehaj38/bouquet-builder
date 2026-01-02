@@ -31,7 +31,7 @@ body {
 }
 
 .landing_page img {
-    margin:40px 20px;
+    margin:10px;
     animation: float 3s ease-in-out infinite;
     image-rendering: pixelated;
 }
